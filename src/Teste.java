@@ -1,3 +1,4 @@
+package Server;
 
 public class Teste {
 	
@@ -11,10 +12,11 @@ public class Teste {
 		BuscaRotaMotorista buscRotMot = new BuscaRotaMotorista(bancod,view);
 		BuscaRotaCarona buscRotCar = new BuscaRotaCarona(bancod,view);
 		
-		view.setR(buscRotCar);
+		view.setB1(buscRotCar);
+		view.setB2(buscRotMot);
 		
 		bancod.registerObserver(view);
-		buscRotCar.makeRoute();
+	    view.routingR();
 		
 	}
 	

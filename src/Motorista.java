@@ -1,5 +1,11 @@
+package Server;
 
 public class Motorista {
+	@Override
+	public String toString() {
+		return "Motorista [saida=" + saida + ", destino=" + destino + ", quantDisp=" + quantDisp + "]";
+	}
+
 	private String saida;
 	private String destino;
 	private int quantDisp;

@@ -1,3 +1,4 @@
+package Server;
 import static spark.Spark.get;
 
 import org.json.JSONArray;
@@ -19,7 +20,7 @@ public class BuscaRotaMotorista implements Busca{
 
 	public void makeRoute(){
 		
-		get(new Route("/rotas") {
+		get(new Route("/rotam") {
 	         @Override
 	         public Object handle(Request request, Response response) {
 

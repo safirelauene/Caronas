@@ -1,3 +1,4 @@
+package Server;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -8,14 +9,26 @@ import com.db4o.ObjectSet;
 public class View implements Observer{
 	
 	private Busca r;
+	private BuscaRotaCarona b1;
+	private BuscaRotaMotorista b2;
 	private ObjectSet result;
 	
-	public void setR(Busca r){
-		this.r = r;
+//	public void setR(Busca r){
+//		this.r = r;
+//	}
+	
+	public void setB1(BuscaRotaCarona b){
+		this.b1 = b;
 	}
 	
+	public void setB2(BuscaRotaMotorista b){
+		this.b2 = b;
+	}
+	
+	
 	public void routingR(){
-		r.makeRoute();
+		b1.makeRoute();
+		b2.makeRoute();
 	}
 	
 	public void update(ObjectSet result){
